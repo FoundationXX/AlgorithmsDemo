@@ -1,0 +1,38 @@
+﻿@model AlgorithmsDemo.Models.DataModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrimeNumbers</title>
+</head>
+<body>
+    <h3>
+        Prime Numbers Less than your input
+    </h3>
+
+    <ul>
+        <li>@Html.ActionLink("Home", "/", "Algorithm")</li>
+        <li>@Html.ActionLink("FibonacciFinder", "FibonacciFinder", "Algorithm")</li>
+        <li>@Html.ActionLink("PrimeNumbers", "PrimeNumbers", "Algorithm")</li>
+        <li>@Html.ActionLink("StringSorter", "StringSorter", "Algorithm")</li>
+    </ul>
+    <hr>
+
+    @using (Html.BeginForm())
+    {
+        <p>Enter a positive integer n, the algorithm will return all prime numbers less than n</p>
+        <p>@Html.TextBoxFor(modelItem => Model.PrimeInput)</p>
+        <input type="submit" name="Your result is shown below" />
+    }
+
+    <br>
+    <div>Result:</div>
+    <p>@Html.DisplayFor(modelItem => Model.PrimeNumbersLessThanN)</p>
+
+
+</body>
+</html>

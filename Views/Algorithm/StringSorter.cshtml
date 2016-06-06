@@ -1,0 +1,37 @@
+﻿@model AlgorithmsDemo.Models.DataModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StringSorter</title>
+</head>
+<body>
+    <h3>
+        Sort your strings
+    </h3>
+    <ul>
+        <li>@Html.ActionLink("Home", "/", "Algorithm")</li>
+        <li>@Html.ActionLink("FibonacciFinder", "FibonacciFinder", "Algorithm")</li>
+        <li>@Html.ActionLink("PrimeNumbers", "PrimeNumbers", "Algorithm")</li>
+        <li>@Html.ActionLink("StringSorter", "StringSorter", "Algorithm")</li>
+    </ul>
+    <hr>
+
+    @using(Html.BeginForm())
+    {
+        <p>Type any strings separated by a comma, the algorithm will sort them for you</p>
+        <p>@Html.TextAreaFor(modelItem => Model.StringInput)</p>
+        <input type="submit" name="Your result is shown below" />
+    }
+
+    <br>
+    <div>Result:</div>
+    <p>@Html.DisplayFor(modelItem => Model.SortedStrings)</p>
+
+
+</body>
+</html>

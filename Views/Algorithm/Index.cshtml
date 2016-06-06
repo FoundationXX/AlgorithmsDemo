@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3> 
+        Welcome to my algorithm demos, please select the algorithm you need:
+    </h3>
+
+    <ul>
+        <li>@Html.ActionLink("Home", "/", "Algorithm")</li>
+        <li>@Html.ActionLink("FibonacciFinder", "FibonacciFinder", "Algorithm")</li>
+        <li>@Html.ActionLink("PrimeNumbers", "PrimeNumbers", "Algorithm")</li>
+        <li>@Html.ActionLink("StringSorter", "StringSorter", "Algorithm")</li>
+    </ul>
+
+
+</body>
+</html>
